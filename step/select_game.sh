@@ -27,6 +27,7 @@ game_options=( \
 		"skyrim" "Skyrim" \
 		"skyrimspecialedition" "Skyrim Special Edition" \
 		"skyrimvr" "Skyrim VR" \
+		"stalkershadowofchernobyl" "S.T.A.L.K.E.R.: Shadow of Chernobyl" \
 		"starfield" "Starfield"
 )
 
