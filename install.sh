@@ -119,8 +119,13 @@ source "$step/download_external_resources.sh"
 source "$step/install_external_resources.sh"
 source "$step/install_nxm_handler.sh"
 source "$step/configure_steam_wineprefix.sh"
-source "$step/install_steam_redirector.sh"
+if [ "${USE_STEAM_REDIRECTOR:-0}" == "1" ]; then
+	source "$step/install_steam_redirector.sh"
+else
+	source "$step/install_steam_launch_wrapper.sh"
+fi
 source "$step/register_installation.sh"
+source "$step/create_desktop_shortcut.sh"
 
 source "$step/apply_workarounds.sh"
 

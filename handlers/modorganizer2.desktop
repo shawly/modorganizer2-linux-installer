@@ -1,0 +1,13 @@
+[Desktop Entry]
+Categories=Game;
+Comment=Open source mod manager for Bethesda games and more
+Exec=env STEAM_RUNTIME=1 /usr/bin/protontricks-launch --appid {{ game_steam_id }} ~/.config/modorganizer2/instances/{{ game_nexus_id }}/modorganizer2/ModOrganizer.exe
+GenericName=ModOrganizer 2
+Keywords=mo2;mod manager;mod organizer;{{ game_nexus_id }};{{ game_name }}
+Icon=modorganizer2
+Name=ModOrganizer 2 ({{ game_name }})
+Path=~/.config/modorganizer2/instances/{{ game_nexus_id }}/modorganizer2
+WorkingDirectory=~/.config/modorganizer2/instances/{{ game_nexus_id }}/modorganizer2
+StartupNotify=true
+Terminal=false
+Type=Application

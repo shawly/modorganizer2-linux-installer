@@ -18,6 +18,14 @@ if [ -z "$(command -v zenity)" ]; then
 	missing_deps+=(zenity)
 fi
 
+if [ -z "$(command -v jq)" ]; then
+	missing_deps+=(jq)
+fi
+
+if [ -z "$(command -v xdg-icon-resource)" ]; then
+	missing_deps+=(xdg-utils)
+fi
+
 if [ -n "${missing_deps[*]}" ]; then
 	log_error "missing dependencies ${missing_deps[@]}"
 	"$dialog" errorbox \
