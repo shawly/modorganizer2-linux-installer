@@ -61,6 +61,7 @@ fi
 sed -e "s|{{ game_nexus_id }}|$game_nexus_id|g" \
     -e "s|{{ game_steam_id }}|$game_steam_id|g" \
     -e "s|{{ game_name }}|$game_name|g" \
+    -e "s|~/|$HOME/|g" \
     "$handlers/modorganizer2.desktop" > "$desktop_file"
 
 # Make executable just in case
