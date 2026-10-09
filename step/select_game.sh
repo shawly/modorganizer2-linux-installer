@@ -28,7 +28,8 @@ game_options=( \
 		"skyrimspecialedition" "Skyrim Special Edition" \
 		"skyrimvr" "Skyrim VR" \
 		"stalkershadowofchernobyl" "S.T.A.L.K.E.R.: Shadow of Chernobyl" \
-		"starfield" "Starfield"
+		"starfield" "Starfield" \
+		"witcher3" "The Witcher 3: Wild Hunt"
 )
 
 selected_game=$( \
