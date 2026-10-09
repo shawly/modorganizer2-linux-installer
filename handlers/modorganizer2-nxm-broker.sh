@@ -67,17 +67,18 @@ fi
 
 if [ "$process_search_status" == "0" ]; then
 	echo "INFO: sending download '$nxm_link' to running Mod Organizer 2 instance"
+	# nxmhandler.exe passes a quoted working directory that Wine rejects
 	case "$game_launcher" in
 	steam)
-		download_start_output=$(WINEESYNC=1 WINEFSYNC=1 protontricks-launch --appid "$game_steam_id" "$instance_dir/modorganizer2/nxmhandler.exe" "$nxm_link")
+		download_start_output=$(WINEESYNC=1 WINEFSYNC=1 protontricks-launch --appid "$game_steam_id" "$instance_dir/modorganizer2/ModOrganizer.exe" "$nxm_link")
 		;;
 	heroic)
 		case "$heroic_release" in
 		system)
-			download_start_output=$(WINEESYNC=1 WINEFSYNC=1 "$WINE" "$instance_dir/modorganizer2/nxmhandler.exe" "$nxm_link")
+			download_start_output=$(WINEESYNC=1 WINEFSYNC=1 "$WINE" "$instance_dir/modorganizer2/ModOrganizer.exe" "$nxm_link")
 			;;
 		flatpak)
-			download_start_output=$(WINEESYNC=1 WINEFSYNC=1 flatpak run --command="$WINE" com.heroicgameslauncher.hgl "$instance_dir/modorganizer2/nxmhandler.exe" "$nxm_link")
+			download_start_output=$(WINEESYNC=1 WINEFSYNC=1 flatpak run --command="$WINE" com.heroicgameslauncher.hgl "$instance_dir/modorganizer2/ModOrganizer.exe" "$nxm_link")
 			;;
 		esac
 		;;
