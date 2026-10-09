@@ -137,7 +137,7 @@ main() {
     done
 
     # If Steam Big Picture Mode is detected we launch the steam-bigpicture shortcut so the game starts directly.
-    if [[ "${SteamTenFoot:-0}" -eq 1 ]] || [[ "${MO2_LAUNCH_WRAPPER_DIRECT_LAUNCH:-0}" -eq 1 ]]; then
+    if [[ "${SteamTenfoot:-0}" -eq 1 ]] || [[ "${MO2_LAUNCH_WRAPPER_DIRECT_LAUNCH:-0}" -eq 1 ]]; then
         launch_args+=("moshortcut://steam-bigpicture")
     fi
 
